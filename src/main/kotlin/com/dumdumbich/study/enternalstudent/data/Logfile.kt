@@ -2,7 +2,7 @@ package com.dumdumbich.study.enternalstudent.data
 
 import java.io.File
 
-class LogFile(private val path: String) {
+class Logfile(private val path: String) {
 
     fun add(message: String) {
         File(path).appendText(message)

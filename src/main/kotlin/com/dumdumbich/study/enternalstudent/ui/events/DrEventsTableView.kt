@@ -6,7 +6,7 @@ import javafx.scene.Parent
 import javafx.scene.layout.GridPane
 import tornadofx.*
 
-class DisturbanceRecorderEventsTableView : View() {
+class DrEventsTableView : View() {
     override val root: Parent = GridPane()
 
     init {
@@ -23,9 +23,15 @@ class DisturbanceRecorderEventsTableView : View() {
         }
     }
 
+
+
     companion object {
-        val disturbanceRecorderEventsTableContent = emptyList<DisturbanceRecorderEvent>()
+        val disturbanceRecorderEventsTableContent = mutableListOf<DisturbanceRecorderEvent>()
         const val tableViewId = "disturbanceRecorderEventsTable"
+
+        fun addEvent(event: DisturbanceRecorderEvent) {
+            disturbanceRecorderEventsTableContent.add(event)
+        }
     }
 
 }

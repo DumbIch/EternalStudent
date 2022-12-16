@@ -1,4 +1,4 @@
-import com.dumdumbich.study.enternalstudent.data.LogFile
+import com.dumdumbich.study.enternalstudent.data.Logfile
 import com.dumdumbich.study.enternalstudent.ui.EternalStudentApp
 import javafx.application.Application
 import java.time.LocalDateTime
@@ -12,11 +12,11 @@ fun main(args: Array<String>) {
     println(MESSAGE_Hello)
     println("$MESSAGE_Args ${args.joinToString()}")
 
-    val log = LogFile(LogFile.PATH)
-    log.add("${LogFile.MESSAGE_AppLaunce} $timeAppLaunched \n")
+    val log = Logfile(Logfile.PATH)
+    log.add("${Logfile.MESSAGE_AppLaunce} $timeAppLaunched \n")
 
     Application.launch(EternalStudentApp::class.java, *args)
 
     val timeAppCompleted = LocalDateTime.now()
-    log.add("${LogFile.MESSAGE_AppComplete} $timeAppCompleted \n")
+    log.add("${Logfile.MESSAGE_AppComplete} $timeAppCompleted \n")
 }
